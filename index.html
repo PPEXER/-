@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <img src="logo.png" alt="Logo" class="logonav">
+      <div class="nav-profile">
+        <span class="nav-profile-name">Hello, User</span>
+        <div class="nav-profile-cart">
+          <i class="fa fa-cart-shopping"></i>
+          <div class="cartcount" id="cart-count">0</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="sidebar">
+      <input type="text" class="sidebar-search" placeholder="Search products...">
+      <div class="sidebar-items">Category 1</div>
+      <div class="sidebar-items">Category 2</div>
+    </div>
+    <div class="sticky rice">
+      <!-- Product Item -->
+      <div class="product-items">
+        <img src="stickyrice.jpg" alt="stickyrice 1" class="product-img">
+        <h3>Product 1</h3>
+        <p>$10.00</p>
+        <button class="btn btn-buy" onclick="addToCart('Product 1', 10)">Add to Cart</button>
+      </div>
+      <div class="product-items">
+        <img src="product2.jpg" alt="Product 2" class="product-img">
+        <h3>Product 2</h3>
+        <p>$15.00</p>
+        <button class="btn btn-buy" onclick="addToCart('Product 2', 15)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div class="modal" id="cart-modal" style="display: none;">
+    <div class="modal-page">
+      <h2>Your Cart</h2>
+      <div id="cart-list"></div>
+      <div class="btn-control">
+        <button class="btn" onclick="closeCart()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
